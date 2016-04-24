@@ -1,0 +1,13 @@
+drop database if exists `hotdog`;
+create database `hotdog` DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+use `hotdog`;
+
+
+create table `employee` (
+    `id` int(10) unsigned not null auto_increment primary key,
+    `full_name` varchar(20) not null unique,
+    `hourly_wage` int(10) default 0,
+    `phone_number` int(4) not null
+) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8;
+
+insert into `employee` values (null, 'yisx', 100, 7339), (null, 'yanss', 200, 3296);
